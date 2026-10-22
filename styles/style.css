@@ -1,5 +1,173 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* переменные для разных тем */
+/*переменные по умолчанию*/
+:root {
+    --bg-image: url(../images/cover-image-dark.png);
+    --bg-color: #1a1a1a;
+}
+
+[data-theme="light"], .theme-light {
+    --bg-image: url(../images/cover-image-light.png);
+    --bg-color: #f5f5f5;
+}
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+    /* Высота равная окну браузера */
+    height: 100vh;
+    /* Мин высота  */
+    min-height: 688px;
+    /* переменная для изображения */
+    background-image: var(--bg-image);
+    background-color: var(--bg-color);
+    background-position: center;
+    /* изображение полностью закрывает родителя*/
+    background-size: cover;
+    background-attachment: fixed;
+    /* запрет повторения картинки */
+    background-repeat: no-repeat;
+    /* .page занимал всю высоту экрана */
+}
+
+.header {
+    position: relative;
+    width: 100%;
+
+}
+
+/* Контейнер-обертка */
+.header__rec-container {
+    position: absolute;
+    /* Координаты для всего блока */
+    top: 0;
+    right: 10px;
+    display: flex;
+    /* Расталкиваем элементы по противоположным краям */
+    justify-content: space-between;
+    margin-right: 9px;
+    width: 43px;
+    height: 26px;
+}
+
+/* 2. текст REC */
+.header__rec-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FF0070;
+    /* Чтобы точка позиционировалась относительно текста */
+    position: relative;
+    left:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%
+}
+
+/* точка */
+.header__rec-text::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #FF0070;
+    border-radius: 50%;
+    left: 100%;
+    margin-left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 8px #FF0070, 0 0 15px #FF0070;
+}
+
+
+/* класс для блоков с уголками */
+.decorated-zone {
+    position: relative;
+    min-height: 100px;
+    height: fit-content;
+}
+
+/* общие стили для обоих уголков */
+.decorated-zone::before,
+.decorated-zone::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px; /*размер уголка*/
+    border-color: #FF0070;
+    border-style: solid;
+    pointer-events: none; /* уголки не мешали кликать по кнопкам */
+}
+
+/* правый уголок */
+.decorated-zone::before {
+    top: 0;
+    right: 0;
+    border-width: 1px 1px 0 0;
+}
+
+/* левый уголок */
+.decorated-zone::after {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 1px 1px;
+}
+
+
+/*контейнер с кнопками тем*/
+.header__theme-menu{
+    position: absolute;
+    width: 70px;
+    height: 98px;
+    display: flex;
+top: 75px;
+right: 0;
+}
+
+
+/*стандартные отступы списка - убираю*/
+.header__theme-menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*стиль для кнопок тем*/
+.header__theme-menu-button{
+    background: transparent;
+    border: 1px solid #FF0070;
+    color: #FF0070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*контейнер тем - день*/
+.header__theme-menu-button_type_light{
+    width: 70px;
+    height: 26px;
+}
+
+/*контейнер тем - авто*/
+.header__theme-menu-button_active {
+    width: 70px;
+    height: 26px;
+}
+
+/*контейнер тем - неон*/
+.header__theme-menu-button_type_dark{
+width: 70px;
+height: 26px;
+}
+
+.header__theme-menu-item:not(:first-child) {
+    margin-top: 10px;
+}
+
+@media( width <375px  ) {
+    .decorated-zone {
+        height: 300px;
+    }
 }
