@@ -32,10 +32,7 @@
     height: 26px;
 }
 
-/*скрыть в светлой теме*/
-.theme-light .header__rec-container {
-    display: none;
-}
+
 
 /* текст REC */
 .header__rec-text {
@@ -71,7 +68,7 @@
 /* класс для блоков с уголками */
 .decorated-zone {
     position: relative;
-    min-height: 100px;
+    min-height: 668px;
     height: fit-content;
 }
 
@@ -137,24 +134,24 @@
     /*цвет и размеры*/
     width: 70px;
     height: 26px;
-    color: var(--button-border-collor);
+    color: var(--button-collor);
     font-family: 'IBM Plex Mono', monospace;
 }
 
 /*СОСТОЯНИЕ: active*/
 .header__theme-menu-button_active {
-    border: 1px solid var(--button-border-collor);
+    border: 1px solid var(--button-border-collor-ative);
 }
 
 /* СОСТОЯНИЕ: hover*/
 .header__theme-menu-button:hover {
-    border: 1px solid var(--button-border-collor);
+    border: 1px solid var(--button-border-collor-hover);
 }
 
 /* СОСТОЯНИЕ: focus  */
 .header__theme-menu-button:focus {
     border: none;
-    border-bottom: 1px solid var(--button-border-collor);
+    border-bottom: 1px solid var(--button-border-collor-focus);
     outline: none;
 }
 
@@ -182,7 +179,6 @@
     font-size: 18px;
     line-height: 23px;
     width: 355px;
-    height: 117px;
     grid-column: 1 / span 3;
     margin-top: 55px;
     margin-bottom: 66px;
@@ -196,7 +192,7 @@
 }
 
 /*первый информативный блок */
-.first__informative {
+.why__block {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -206,14 +202,14 @@
 
 
 /*контейнер с 2 текстами первого блока*/
-.first__info {
+.why__info {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 /* текст 1 блока */
-.first__info__card {
+.why__info__card {
     display: flex;
     flex-direction: column;
 }
@@ -284,13 +280,13 @@
 /* СОСТОЯНИЕ: hover*/
 .text__link:hover {
     border: none;
-    border-bottom: 1px solid  var(--button-border-collor);
+    border-bottom: 1px solid  var(--button-border-collor-link);
     outline: none;
 }
 
 /* СОСТОЯНИЕ: focus  */
 .text__link:focus {
-    border: 1px solid  var(--button-border-collor);
+    border: 1px solid  var(--button-border-collor-link);
     outline: none;
 }
 
@@ -311,7 +307,7 @@
 
 .footer {
     display: flex;
-    height: 668px;
+    min-height: 668px;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -323,10 +319,9 @@
     color: var(--title-color);
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
-    font-size: 116px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height: 83%;
     word-wrap: break-word;
-    height: 96px;
     filter: drop-shadow(4px 4px 0px var(--accent-color));
 }
 
@@ -339,11 +334,10 @@
 
     .decorated-zone {
         min-height: 1024px;
-        max-height: 1024px;
         justify-content: space-around;
     }
     .header__heading-focus{
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 
 
@@ -354,7 +348,7 @@
         margin-bottom: 0;
     }
 
-    .first__informative {
+    .why__block {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: start;
@@ -362,12 +356,12 @@
     }
 
     /*изменения для 2 блока*/
-    .second__informative {
+    .what__block {
         margin-top: 80px;
     }
 
     /*изменения для 3 блока*/
-    .third__informative {
+    .how__block {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 20px;
@@ -451,12 +445,11 @@
 
     .decorated-zone {
         min-height: 768px;
-        max-height: 768px;
     }
 
 
     /*изменения для 2 блока*/
-    .second__informative {
+    .what__block {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
@@ -464,7 +457,7 @@
         margin-top: 80px;
     }
 
-    .second__info__card {
+    .what__info__card {
         grid-row-start: 2;
 
         .card__title {
@@ -477,7 +470,6 @@
     }
     .header__text {
         width: 490px;
-        height: 70px;
     }
 }
 

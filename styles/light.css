@@ -13,7 +13,11 @@
     --title-color: #FFC2E6;
     --card-bg: #FF8DCB;
     --card-text: #1a1a1a;
-    --button-border-collor: #353430;
+    --button-collor:#353430;
+    --button-border-collor-ative: #353430;
+    --button-border-collor-hover: #35343066;
+    --button-border-collor-focus: #353430;
+    --button-border-collor-link: #35343066;
     --decor-angle-header: #353430;
 }
 
@@ -27,9 +31,13 @@
         --title-color: #FFC2E6;
         --card-bg: #FF8DCB;
         --card-text: #1a1a1a;
-        --button-border-collor: #353430;
+        --button-border-collor: #35343066;;
         --decor-angle-header: #353430;
     }
 }
 
+/*скрыть в светлой теме*/
+.theme-light .header__rec-container {
+    display: none;
+}
 

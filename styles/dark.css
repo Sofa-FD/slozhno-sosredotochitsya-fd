@@ -12,6 +12,10 @@
     --title-color: #DB00FF;
     --card-bg: #FF0070;
     --card-text: #000028;
-    --button-border-collor: #FF0070;
+    --button-collor:#FF0070;
+    --button-border-collor-ative: #FF0070;
+    --button-border-collor-hover: #FF007066;
+    --button-border-collor-focus: #FF0070;
+    --button-border-collor-link: #F1B2CE;
     --decor-angle-header: #FF0070;
 }

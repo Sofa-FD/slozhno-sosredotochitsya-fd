@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/dark.css">
@@ -58,19 +60,21 @@
         </ul>
     </nav>
 
-    <span class="header__heading-focus">no focus</span>
-    <span class="header__text title-decor">Что делать, когда не можешь делать ничего
-Или почему нам так сложно сконцентрироваться, особенно когда очень надо</span>
+    <h1 class="header__heading-focus">no focus</h1>
+    <p class="header__text title-decor">Что делать, когда не можешь делать ничего
+Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
 </header>
 
+<main>
+
 <!--первый текстовый блок-->
-<div class="first__informative">
+<section class="why__block">
 
-    <h1 class="block__title">Почему сосредоточиться так сложно</h1>
+    <h2 class="block__title">Почему сосредоточиться так сложно</h2>
 
-    <div class="first__info">
+    <div class="why__info">
 
-        <div class="first__info__card">
+        <div class="why__info__card">
             <h2 class="card__title ">Многозадачность</h2>
             <p class="card__text">
             Особенно сложно сосредоточиться, когда задач много и все они — важные.
@@ -84,7 +88,7 @@
             Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
         </div>
 
-        <div class="first__info__card">
+        <div class="why__info__card">
             <h2 class="card__title">Дофамин</h2>
             <p class="card__text">
             С гормонами стресса всё понятно, но дальше — ещё интереснее.
@@ -99,15 +103,14 @@
             тем больше удовольствия получаешь.</p>
         </div>
     </div>
-</div>
+</section>
 
 <!-- второй текстовый блок -->
+<section class="what__block">
+    <h2 class="block__title">Что снижает концентрацию внимания?</h2>
+<!--    <div class="what__info">-->
 
-<div class="second__informative">
-    <h1 class="block__title">Что снижает концентрацию внимания?</h1>
-<!--    <div class="second__info">-->
-
-<div class="second__info__card">
+<div class="what__info__card">
 <h2 class="card__title">Концентрация</h2>
 <p class="card__text">
     Как концентрация может снижаться из-за… концентрации?
@@ -117,7 +120,7 @@
     Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть.</p>
 </div>
 
-<div class="second__info__card">
+<div class="what__info__card">
 <h2 class="card__title">Еда</h2>
 <p class="card__text">
     «Быстрые углеводы» — сахар, белый хлеб, сладости
@@ -129,7 +132,7 @@
     И хотим ещё больше быстрых углеводов.</p>
 </div>
 
-<div class="second__info__card">
+<div class="what__info__card">
 <h2 class="card__title">Гаджеты</h2>
 <p class="card__text">
     Да-да, это та самая ситуация, когда на экране ноутбука — код,
@@ -141,19 +144,19 @@
     времени мы проводим в гаджетах, тем больше времени затем нужно,
     чтобы вернуться к работе.</p>
 </div>
-</div>
+</section>
 <!--</div>-->
 
 <!--третий информативный-->
-<div class="third__informative">
+<div class="how__block">
 <h1 class="block__title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h1>
 
 
 
-<div class="third__info">
+<section class="how__info">
     <h2 class="card__title">5 простых (на самом деле не очень) советов</h2> <!--правила-->
 
-    <div class="third__info__card">
+    <div class="how__info__card">
 <h3 class="card__title__recommendations">Представьте небо и облака</h3>
 <p class="card__text">
     Или листья в ручье. Тут дело в лёгкой медитации,
@@ -166,7 +169,7 @@
     а не волноваться о потенциальных проблемах из будущего.</p>
 </div>
 
-    <div class="third__info__card">
+    <div class="how__info__card">
 <h3 class="card__title__recommendations">Включите музыку</h3>
 <p class="card__text">Но не любую, и не любимую. Любимая может быть связана
     с сильными положительными эмоциями,
@@ -176,7 +179,7 @@
     с «белым шумом» или нейромузыкой.</p>
 </div>
 
-    <div class="third__info__card">
+    <div class="how__info__card">
 <h3 class="card__title__recommendations">Прогуляйтесь</h3>
 <p class="card__text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
     <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" class="text__link">показал</a>
@@ -188,7 +191,7 @@
     показал</p>
 </div>
 
-    <div class="third__info__card">
+    <div class="how__info__card">
 <h3 class="card__title__recommendations">Хорошо ешьте</h3>
 <p class="card__text">Мы — не ваша бабушка, но это правда важно.
     Выбирайте продукты, которые препятствуют резким
@@ -197,34 +200,33 @@
     хлеб из цельнозерновой пшеницы.</p>
 </div>
 
-    <div class="third__info__card">
+    <div class="how__info__card">
 <h3 class="card__title__recommendations">Читайте</h3>
 <p class="card__text">Настоящие бумажные книги. Это правда помогает с концентрацией:
     чтобы прочитать пост в соцсети, достаточно нескольких минут
     или даже секунд. А вот интересная книга способна затянуть
     и на несколько часов и круто тренирует направленное внимание.</p>
 </div>
-</div>
+</section>
 </div>
 
 <!--в картинках-->
-<div class="pictures">
+<section class="pictures">
 <h2 class="card__title">А можно в картинках?</h2>
 
 <!--контейнер с картинками-->
     <div class="pictures__container">
-        <img src="images/sunset.png" alt="sunset" class="sunset pictures__img">
-        <img src="images/ice-cream.png" alt="ice-cream" class="ice-cream pictures__img">
-        <img src="images/tape.png" alt="tape" class="tape pictures__img">
-        <img src="images/books.png" alt="books" class="books pictures__img">
-        <img src="images/street.png" alt="street" class="street pictures__img">
+        <img src="images/sunset.png" alt="небо и облака" class="sunset pictures__img">
+        <img src="images/ice-cream.png" alt="мороженное" class="ice-cream pictures__img">
+        <img src="images/tape.png" alt="касета с музыкой" class="tape pictures__img">
+        <img src="images/books.png" alt="книги" class="books pictures__img">
+        <img src="images/street.png" alt="улица" class="street pictures__img">
     </div>
-</div>
+</section>
 
-</body>
-
+</main>
 <footer class="footer decorated-zone">
-    <span class="footer__heading-focus">focus</span>
+    <h2 class="footer__heading-focus">focus</h2>
 </footer>
-
+</body>
 </html>
