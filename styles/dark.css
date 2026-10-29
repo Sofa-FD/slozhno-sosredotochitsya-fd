@@ -3,7 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
 :root.theme-dark {
     --bg-image: url(../images/cover-image-dark.png);
     --bg-color: #1a1a1a;
@@ -12,10 +11,21 @@
     --title-color: #DB00FF;
     --card-bg: #FF0070;
     --card-text: #000028;
-    --button-collor:#FF0070;
+    --button-collor: #FF0070;
     --button-border-collor-ative: #FF0070;
     --button-border-collor-hover: #FF007066;
     --button-border-collor-focus: #FF0070;
     --button-border-collor-link: #F1B2CE;
     --decor-angle-header: #FF0070;
+
+    .header__rec-container {
+        visibility: visible;
+    }
 }
+
+@media (prefers-color-scheme: dark) {
+    .header__rec-container {
+        visibility: visible;
+    }
+}
+
