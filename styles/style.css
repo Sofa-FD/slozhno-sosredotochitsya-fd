@@ -7,7 +7,6 @@
 .page {
     /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
     /* Высота равная окну браузера */
-    height: fit-content;
     min-height: 100vh;
     margin: 10px;
     background-image: var(--bg-image);
@@ -191,7 +190,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 20px;
+    /*gap: 10px;*/
     margin-top: 35px;
 }
 
@@ -199,7 +198,7 @@
 .content-section__info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /*gap: 10px;*/
 }
 
 /* текст 1 блока */
@@ -216,7 +215,7 @@
     font-style: normal;
     font-size: 18px;
     line-height: 23px;
-    margin: 17px 0 -15px 0;
+    margin: 17px 0 0 0;
     letter-spacing: normal;
 }
 
@@ -232,6 +231,7 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: normal;
+    margin: 20px 0 0 0;
 }
 
 /*заголовки h3*/
@@ -244,6 +244,7 @@
     font-size: 18px;
     line-height: 23px;
     letter-spacing: normal;
+    margin: 20px 0 0;
 }
 
 /*параграфы*/
@@ -253,8 +254,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
-    line-height: 23px;
-    margin: -2px 0 1px 0;
+    line-height: 23.4px;
+    margin: 10px 0 0 0;
     letter-spacing: 0;
 }
 
@@ -286,7 +287,7 @@
 }
 
 .pictures{
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 /*картинки*/
@@ -294,6 +295,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    margin-top: 10px;
     gap: 10px;
 }
 
@@ -304,11 +306,10 @@
 
 .footer {
     display: flex;
-    min-height: 668px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 50px;
+
 }
 
 /* заголовок в футере*/
@@ -341,7 +342,6 @@
     .header__text {
         margin: 162px 0 0 0;
         width: 364px;
-        height: 117px;
     }
 
     /*контейнер с кнопками тем*/
@@ -364,12 +364,11 @@
     }
 
     .card__text{
-        line-height: 23.4px;
         margin: 0;
     }
 
     .card__title {
-        margin: 0 0 9px 0;
+        margin: 0 0 10px 0;
     }
 
     .card__title__custom-adaptive{
@@ -380,7 +379,7 @@
         margin: 0 0 10px 0;
     }
     .pictures{
-        margin-top: 80px;
+        margin: 80px 0;
     }
 
     .content-section {
@@ -388,7 +387,7 @@
         grid-template-columns: auto 1fr;
         align-items: start;
         margin-top: 80px;
-        /*gap: 20px;*/
+        gap: 20px;
     }
 
     /*изменения для 2 блока*/
@@ -441,9 +440,6 @@
         display: block;
     }
 
-    .footer {
-        margin-top: 70px;
-    }
 
     .footer__heading-focus{
        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -511,7 +507,6 @@
 
     .header__text {
         width: 490px;
-        height: 71px;
         margin-top: 114px;
     }
 
